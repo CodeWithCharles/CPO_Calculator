@@ -10,7 +10,7 @@
         Width="237"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Topmost="True">
+        WindowStyle="None">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#1f1f1f"></Setter>
@@ -19,7 +19,8 @@
             <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
             <Setter Property="Margin" Value="1"></Setter>
-            <Setter Property="FontSize" Value="15px"></Setter>
+            <Setter Property="FontSize" Value="20px"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="Template">
@@ -38,70 +39,107 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Grid Background="#404040" Height="280" VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="8px"/>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="8px" />
-        </Grid.ColumnDefinitions>
+    <Grid Background="#404040">
         <Grid.RowDefinitions>
-            <RowDefinition Height="10px"/>
+            <RowDefinition Height="4px"/>
+            <RowDefinition Height="20px"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="10px"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Column="1" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10px"/>
-                <RowDefinition Height="38px"/>
-                <RowDefinition Height="20px"/>
-                <RowDefinition Height="180px"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" Height="10" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="1" Background="#404040" HorizontalAlignment="Stretch"  
-                     Height="38" VerticalAlignment="Top" Foreground="White" Name="TB_UserInput" 
-                     TextWrapping="Wrap" FontSize="20" VerticalContentAlignment="Center">
-                <TextBox.BorderThickness>
-                    <Thickness/>
-                </TextBox.BorderThickness>
-            </TextBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4px"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4px"/>
+            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="3">
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Image Width="20px" Height="20px" Margin="0,0,4,0"
+                       Source="Assets/Images/calculator.png"/>
+                <TextBlock Text="Calculatrice"
+                       Foreground="White"
+                       FontSize="15px"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"/>
+            </StackPanel>
+            
+        </Grid>
+        
+        <Grid VerticalAlignment="Bottom" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2px"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2px" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2px"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2px"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="1">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="20px"/>
+                    <RowDefinition Height="38px"/>
+                    <RowDefinition Height="20px"/>
+                    <RowDefinition Height="180px"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="1">
+                
+                <Label Grid.Row="0" Height="20px" VerticalAlignment="Top" 
+                       HorizontalAlignment="Right" Content="95+3"
+                       Padding="0,0,0,0" FontSize="15" FontWeight="Medium" Foreground="White" Margin="0,0,4,0"
+                       HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                
+                <TextBox Grid.Row="1" Background="#404040" HorizontalAlignment="Stretch"  
+                     Height="38" VerticalAlignment="Top" Foreground="White" Name="TB_UserInput" 
+                     TextWrapping="Wrap" FontSize="20" FontWeight="Medium" TextAlignment="Right" VerticalContentAlignment="Center">
+                    
+                    <TextBox.BorderThickness>
+                        <Thickness/>
+                    </TextBox.BorderThickness>
+                </TextBox>
+
+                <Grid Grid.Row="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="32px"/>
-                        <RowDefinition Height="32px"/>
-                        <RowDefinition Height="32px"/>
-                        <RowDefinition Height="32px"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Content="7" Grid.Column="0" Grid.Row="1"/>
-                    <Button Content="4" Grid.Column="0" Grid.Row="2"/>
-                    <Button Content="1" Grid.Column="0" Grid.Row="3"/>
-                    <Button Content="," Grid.Column="0" Grid.Row="4"/>
-                    <Button Content="8" Grid.Column="1" Grid.Row="1"/>
-                    <Button Content="5" Grid.Column="1" Grid.Row="2"/>
-                    <Button Content="2" Grid.Column="1" Grid.Row="3"/>
-                    <Button Content="0" Grid.Column="1" Grid.Row="4"/>
-                    <Button Content="9" Grid.Column="2" Grid.Row="1"/>
-                    <Button Content="6" Grid.Column="2" Grid.Row="2"/>
-                    <Button Content="3" Grid.Column="2" Grid.Row="3"/>
-                    <Button Content="=" Grid.Column="2" Grid.Row="4"/>
-                    <Button Content="/" Grid.Column="3" Grid.Row="1"/>
-                    <Button Content="*" Grid.Column="3" Grid.Row="2"/>
-                    <Button Content="-" Grid.Column="3" Grid.Row="3"/>
-                    <Button Content="+" Grid.Column="3" Grid.Row="4"/>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="32px"/>
+                            <RowDefinition Height="32px"/>
+                            <RowDefinition Height="32px"/>
+                            <RowDefinition Height="32px"/>
+                            <RowDefinition Height="32px"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Del" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
+                        <Button Content="&#x21e4;" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1"/>
+                        <Button Content="7" Grid.Column="0" Grid.Row="2"/>
+                        <Button Content="4" Grid.Column="0" Grid.Row="3"/>
+                        <Button Content="1" Grid.Column="0" Grid.Row="4"/>
+                        <Button Content="," Grid.Column="0" Grid.Row="5"/>
+                        <Button Content="8" Grid.Column="1" Grid.Row="2"/>
+                        <Button Content="5" Grid.Column="1" Grid.Row="3"/>
+                        <Button Content="2" Grid.Column="1" Grid.Row="4"/>
+                        <Button Content="0" Grid.Column="1" Grid.Row="5"/>
+                        <Button Content="9" Grid.Column="2" Grid.Row="2"/>
+                        <Button Content="6" Grid.Column="2" Grid.Row="3"/>
+                        <Button Content="3" Grid.Column="2" Grid.Row="4"/>
+                        <Button Content="=" Grid.Column="2" Grid.Row="5"/>
+                        <Button Content="/" Grid.Column="3" Grid.Row="2"/>
+                        <Button Content="*" Grid.Column="3" Grid.Row="3"/>
+                        <Button Content="-" Grid.Column="3" Grid.Row="4"/>
+                        <Button Content="+" Grid.Column="3" Grid.Row="5"/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
