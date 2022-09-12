@@ -1,0 +1,14 @@
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\bin\Debug\CPO_Calculator.exe.config
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\bin\Debug\CPO_Calculator.exe
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\bin\Debug\CPO_Calculator.pdb
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.csprojAssemblyReference.cache
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\App.g.cs
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator_MarkupCompile.cache
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator_MarkupCompile.lref
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\MainWindow.baml
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.g.resources
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.Properties.Resources.resources
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.csproj.GenerateResource.cache
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.exe
+C:\Users\Charles\Desktop\2SIO\STJOSUP\BLOC3\C#\CPO_Calculator\CPO_Calculator\obj\Debug\CPO_Calculator.pdb
