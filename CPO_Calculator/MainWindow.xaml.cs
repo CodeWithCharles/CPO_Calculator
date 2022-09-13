@@ -24,5 +24,38 @@ namespace CPO_Calculator
         {
             InitializeComponent();
         }
+
+        private void BtnResult_Click(object sender, RoutedEventArgs e)
+        {
+            TblResult.Text = TbUserInput.Text;
+            TbUserInput.Text = "";
+        }
+
+        private void BtnReturn_Click(object sender, RoutedEventArgs e)
+        {
+
+            if(TbUserInput.Text.Length >= 1)
+            {
+                Button button = (Button)sender;
+                TbUserInput.Text = TbUserInput.Text.Remove(TbUserInput.Text.Length - 1);
+            }
+        }
+
+        private void BtnDel_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TbUserInput.Text = "";
+            TblResult.Text = "";
+        }
+
+        private void BtnDel_Click(object sender, RoutedEventArgs e)
+        {
+            TbUserInput.Text = "";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            TbUserInput.Text += button.Content.ToString();
+        }
     }
 }
