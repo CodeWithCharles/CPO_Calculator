@@ -134,10 +134,10 @@
                         <Button Content="6" Grid.Column="2" Grid.Row="3" Click="Button_Click"/>
                         <Button Content="3" Grid.Column="2" Grid.Row="4" Click="Button_Click"/>
                         <Button Content="=" Grid.Column="2" Grid.Row="5" Name="BtnResult" Click="BtnResult_Click"/>
-                        <Button Content="&#xF7;" Grid.Column="3" Grid.Row="2"/>
-                        <Button Content="&#xD7;" Grid.Column="3" Grid.Row="3"/>
-                        <Button Content="&#x2D;" Grid.Column="3" Grid.Row="4"/>
-                        <Button Content="&#x2B;" Grid.Column="3" Grid.Row="5"/>
+                        <Button Content="&#xF7;" Grid.Column="3" Grid.Row="2" Click="Button_Click"/>
+                        <Button Content="&#xD7;" Grid.Column="3" Grid.Row="3" Click="Button_Click"/>
+                        <Button Content="&#x2D;" Grid.Column="3" Grid.Row="4" Click="Button_Click"/>
+                        <Button Content="&#x2B;" Grid.Column="3" Grid.Row="5" Click="Button_Click"/>
                     </Grid>
                 </Grid>
             </Grid>

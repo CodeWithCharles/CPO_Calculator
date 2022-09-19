@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,15 +21,38 @@ namespace CPO_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static IDictionary<char, char> operand = new Dictionary<char, char>();
+
         public MainWindow()
         {
             InitializeComponent();
+            operand['÷'] = '/';
+            operand['×'] = '*';
+            operand['-'] = '-';
+            operand['+'] = '+';
         }
 
-        private void BtnResult_Click(object sender, RoutedEventArgs e)
+        private async void BtnResult_Click(object sender, RoutedEventArgs e)
         {
-            TblResult.Text = TbUserInput.Text;
-            TbUserInput.Text = "";
+            DataTable dt = new DataTable();
+            string baseExpr = TbUserInput.Text;
+            string expr = TbUserInput.Text;
+            foreach(KeyValuePair<char, char> ops in operand)
+            {
+                expr = expr.Replace(ops.Key, ops.Value);
+            }
+            try
+            {
+                Double result = Double.Parse(dt.Compute(expr, null).ToString());
+                if (result == Double.PositiveInfinity) throw new DivideByZeroException();
+                string resultOutput = await Task.Run(() => $"{baseExpr} = {result.ToString()}");
+                TblResult.Text = resultOutput;
+                TbUserInput.Text = result.ToString();
+            } catch(Exception error)
+            {
+                MessageBox.Show(error.Message, "Erreur lors du calcul de l'expression", MessageBoxButton.OK, MessageBoxImage.Error);
+                BtnDel_Click(null, null);
+            }
         }
 
         private void BtnReturn_Click(object sender, RoutedEventArgs e)
@@ -55,7 +79,8 @@ namespace CPO_Calculator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            TbUserInput.Text += button.Content.ToString();
+            string toAdd = button.Content.ToString();
+            TbUserInput.Text += toAdd;
         }
     }
 }
