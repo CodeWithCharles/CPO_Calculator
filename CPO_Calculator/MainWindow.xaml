@@ -107,12 +107,13 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="32px"/>
-                            <RowDefinition Height="32px"/>
-                            <RowDefinition Height="32px"/>
-                            <RowDefinition Height="32px"/>
-                            <RowDefinition Height="32px"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="28px"/>
+                            <RowDefinition Height="28px"/>
+                            <RowDefinition Height="28px"/>
+                            <RowDefinition Height="28px"/>
+                            <RowDefinition Height="28px"/>
+                            <RowDefinition Height="28px"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -120,25 +121,27 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Content="&#x221A;" Grid.Column="0" Grid.Row="1" Click="Button_Click"/>
-                        <Button Content="Del" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Name="BtnDel" Click="BtnDel_Click" MouseDoubleClick="BtnDel_MouseDoubleClick"/>
-                        <Button Content="&#x21e4;" Grid.Column="3" Grid.Row="1" Name="BtnReturn" Click="BtnReturn_Click"/>
-                        <Button Content="7" Grid.Column="0" Grid.Row="2" Click="Button_Click"/>
-                        <Button Content="4" Grid.Column="0" Grid.Row="3" Click="Button_Click"/>
-                        <Button Content="1" Grid.Column="0" Grid.Row="4" Click="Button_Click"/>
-                        <Button Content="." Grid.Column="0" Grid.Row="5" Click="Button_Click"/>
-                        <Button Content="8" Grid.Column="1" Grid.Row="2" Click="Button_Click"/>
-                        <Button Content="5" Grid.Column="1" Grid.Row="3" Click="Button_Click"/>
-                        <Button Content="2" Grid.Column="1" Grid.Row="4" Click="Button_Click"/>
-                        <Button Content="0" Grid.Column="1" Grid.Row="5" Click="Button_Click"/>
-                        <Button Content="9" Grid.Column="2" Grid.Row="2" Click="Button_Click"/>
-                        <Button Content="6" Grid.Column="2" Grid.Row="3" Click="Button_Click"/>
-                        <Button Content="3" Grid.Column="2" Grid.Row="4" Click="Button_Click"/>
-                        <Button Content="=" Grid.Column="2" Grid.Row="5" Name="BtnResult" Click="BtnResult_Click"/>
-                        <Button Content="&#xF7;" Grid.Column="3" Grid.Row="2" Click="Button_Click"/>
-                        <Button Content="&#xD7;" Grid.Column="3" Grid.Row="3" Click="Button_Click"/>
-                        <Button Content="&#x2D;" Grid.Column="3" Grid.Row="4" Click="Button_Click"/>
-                        <Button Content="&#x2B;" Grid.Column="3" Grid.Row="5" Click="Button_Click"/>
+                        <Button Content="(" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Click="Button_Click"/>
+                        <Button Content=")" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Click="Button_Click"/>
+                        <Button Content="&#x221A;" Grid.Column="0" Grid.Row="2" Click="Button_Click"/>
+                        <Button Content="Del" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Name="BtnDel" Click="BtnDel_Click" MouseDoubleClick="BtnDel_MouseDoubleClick"/>
+                        <Button Content="&#x21e4;" Grid.Column="3" Grid.Row="2" Name="BtnReturn" Click="BtnReturn_Click"/>
+                        <Button Content="7" Grid.Column="0" Grid.Row="3" Click="Button_Click"/>
+                        <Button Content="4" Grid.Column="0" Grid.Row="4" Click="Button_Click"/>
+                        <Button Content="1" Grid.Column="0" Grid.Row="5" Click="Button_Click"/>
+                        <Button Content="." Grid.Column="0" Grid.Row="6" Click="Button_Click"/>
+                        <Button Content="8" Grid.Column="1" Grid.Row="3" Click="Button_Click"/>
+                        <Button Content="5" Grid.Column="1" Grid.Row="4" Click="Button_Click"/>
+                        <Button Content="2" Grid.Column="1" Grid.Row="5" Click="Button_Click"/>
+                        <Button Content="0" Grid.Column="1" Grid.Row="6" Click="Button_Click"/>
+                        <Button Content="9" Grid.Column="2" Grid.Row="3" Click="Button_Click"/>
+                        <Button Content="6" Grid.Column="2" Grid.Row="4" Click="Button_Click"/>
+                        <Button Content="3" Grid.Column="2" Grid.Row="5" Click="Button_Click"/>
+                        <Button Content="=" Grid.Column="2" Grid.Row="6" Name="BtnResult" Click="BtnResult_Click"/>
+                        <Button Content="&#xF7;" Grid.Column="3" Grid.Row="3" Click="Button_Click"/>
+                        <Button Content="&#xD7;" Grid.Column="3" Grid.Row="4" Click="Button_Click"/>
+                        <Button Content="&#x2D;" Grid.Column="3" Grid.Row="5" Click="Button_Click"/>
+                        <Button Content="&#x2B;" Grid.Column="3" Grid.Row="6" Click="Button_Click"/>
                     </Grid>
                 </Grid>
             </Grid>
